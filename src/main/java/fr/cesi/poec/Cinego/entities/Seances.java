@@ -27,4 +27,6 @@ public class Seances {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	
+	// edit
 }
