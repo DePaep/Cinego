@@ -20,13 +20,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 //JPA - DB Mapping
-@Entity(name="contacts")
+@Entity(name="Seances")
 
 public class Seances {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	
 	
 	// commentaire
 	// edit 
