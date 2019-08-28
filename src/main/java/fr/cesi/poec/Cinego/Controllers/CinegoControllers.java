@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.cesi.poec.Cinego.entities.Movies;
 import fr.cesi.poec.Cinego.repositories.moviesRepository;
 import fr.cesi.poec.springaddressbook.entities.Contact;
 import fr.cesi.poec.springaddressbook.repositories.ContactRepository;
@@ -31,11 +32,11 @@ public class CinegoControllers
 
 
 	@GetMapping("")
-	public ResponseEntity<List<Contact>> getAllContacts()
+	public ResponseEntity<List<Movies>> getAllMovies()
 	{
 
-		return 	new ResponseEntity<List<Contact>>(
-				(List<Contact>)contactRepo.findAll(),
+		return 	new ResponseEntity<List<Movies>>(
+				(List<Movies>)movieRepo.findAll(),
 				HttpStatus.OK
 				);
 
