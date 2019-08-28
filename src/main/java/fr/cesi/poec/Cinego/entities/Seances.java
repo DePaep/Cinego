@@ -28,5 +28,6 @@ public class Seances {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	// edit  Michael
+	// commentaire
+	// edit 
 }
