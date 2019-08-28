@@ -25,7 +25,7 @@ public class Movies
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private Long idMovie;
 	
 	private String title;
 	private String genre;//+--e

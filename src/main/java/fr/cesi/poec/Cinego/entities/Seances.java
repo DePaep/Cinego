@@ -26,9 +26,10 @@ public class Seances {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private Long idSeance;
+	private int horraire;
+	private Movies movie;
 	
 	
-	// commentaire
-	// edit 
+
 }
