@@ -27,7 +27,7 @@ public class Seances {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idSeance;
-	private int horraire;
+	private int horaire;
 	private Movies movie;
 	
 	
