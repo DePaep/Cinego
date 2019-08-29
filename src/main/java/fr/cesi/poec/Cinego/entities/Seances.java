@@ -1,13 +1,12 @@
 package fr.cesi.poec.Cinego.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 //@Entity => permet de mapper de la class à une table
 //@Entity(name= ...) => preciser le nom de la table
@@ -20,14 +19,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 //JPA - DB Mapping
-@Entity(name="Seances")
-
+@Entity(name="seances")
 public class Seances {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idSeance;
-	private int horaire;
+	private Integer horaire;
+	@OneToOne
 	private Movies movie;
 	
 	
