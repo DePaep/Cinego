@@ -24,10 +24,17 @@ public class UsersControllers
     }
 
     //POST /contacts
-    @PostMapping("/register")
+   @CrossOrigin()
+    @RequestMapping(method = RequestMethod.POST, path = "/register")
     public ResponseEntity<Users> inscription(@RequestBody Users users) {
         users = this.usersRepository.save(users);
         return new ResponseEntity<Users>(users, HttpStatus.CREATED);
+    }
+    @CrossOrigin()
+    @RequestMapping(method = RequestMethod.POST, path = "/connexion")
+    public ResponseEntity<Users> connexion(@RequestBody Users users) {
+        Users test = usersRepository.selectUsers(users.getEmail());
+        return new ResponseEntity<Users>(test, HttpStatus.CREATED);
     }
 
 }

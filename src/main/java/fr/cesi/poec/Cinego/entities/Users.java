@@ -1,14 +1,15 @@
 package fr.cesi.poec.Cinego.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 //JPA - DB Mapping
 @Entity(name="users")
 public class Users {
@@ -18,4 +19,5 @@ public class Users {
     private String email;
     @Column(name =  "motdepasse")
     private String password;
+    public String getEmail(){return this.email;}
 }
